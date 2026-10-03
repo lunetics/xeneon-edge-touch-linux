@@ -1,0 +1,11 @@
+[Unit]
+Description=Touch proxy for multiple Corsair Xeneon Edge screens
+After=graphical-session.target
+
+[Service]
+ExecStart=%h/.local/bin/xeneon-edge-touch run
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target
